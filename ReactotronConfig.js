@@ -1,9 +1,5 @@
 import Reactotron, { networking, openInEditor } from 'reactotron-react-native'
-import mmkvPlugin from 'reactotron-react-native-mmkv'
 import { AsyncStorage } from '@react-native-async-storage/async-storage'
-import { reactotronRedux } from 'reactotron-redux'
-
-import { storage } from './src/storage/MMKStorage'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 Reactotron.onCustomCommand({
@@ -26,8 +22,6 @@ const reactotron = Reactotron.setAsyncStorageHandler(AsyncStorage)
 	})
 	.use(networking())
 	.use(openInEditor())
-	.use(reactotronRedux())
-	.use(mmkvPlugin({ storage }))
 	.connect()
 
 export default reactotron

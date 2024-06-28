@@ -5,14 +5,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ThemeProvider } from 'styled-components/native'
 import { PaperProvider } from 'react-native-paper'
 
-import { theme } from '@/styles'
+import { theme, themePaper } from '@/styles'
 
 export const AppProvider = ({ children }: PropsWithChildren) => {
 	return (
 		<NavigationContainer>
 			<ThemeProvider theme={theme}>
 				<SafeAreaProvider>
-					<PaperProvider>
+					<PaperProvider theme={themePaper}>
 						<StatusBar
 							barStyle="dark-content"
 							backgroundColor="transparent"

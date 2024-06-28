@@ -57,7 +57,6 @@ try {
 const getStories = () => {
   return {
     "./src/components/Container/Container.stories.tsx": require("../src/components/Container/Container.stories.tsx"),
-    "./src/components/Main/Main.stories.tsx": require("../src/components/Main/Main.stories.tsx"),
     "./src/screens/Home/Home.stories.tsx": require("../src/screens/Home/Home.stories.tsx"),
   };
 };

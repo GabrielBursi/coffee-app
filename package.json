@@ -144,8 +144,6 @@
 		"react-query-native-devtools": "^4.0.0",
 		"react-test-renderer": "18.2.0",
 		"reactotron-react-native": "^5.1.0",
-		"reactotron-react-native-mmkv": "^0.2.3",
-		"reactotron-redux": "^3.1.7",
 		"ts-jest": "^29.1.2",
 		"ts-node-dev": "^2.0.0",
 		"typescript": "5.0.4",

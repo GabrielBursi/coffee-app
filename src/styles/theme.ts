@@ -3,6 +3,7 @@ import { Dimensions } from 'react-native'
 import { lighten } from 'polished'
 import normalize from 'react-native-normalize'
 import { RFValue } from 'react-native-responsive-fontsize'
+import { MD3Theme, MD3LightTheme } from 'react-native-paper'
 
 const windowHeight = Dimensions.get('window').height
 
@@ -43,18 +44,19 @@ export const theme = {
 		},
 	},
 	colors: {
-		primary: '#000',
-		secondary: '#000',
-		mainBg: '#000',
-		secondaryBg: '#000',
-		primaryText: '#000',
-		secondaryText: '#000',
+		primary: '#C67C4E',
+		secondary: '#EDD6C8',
+		tertiary: '#F9F2ED',
+		mainBg: '#f9f9f9',
+		secondaryBg: '#222222',
+		primaryText: '#313131',
+		secondaryText: '#E3E3E3',
 		black: '#000',
 		white: '#fff',
-		primaryShadow: lighten(0.4, `#000`),
-		secondaryShadow: lighten(0.4, `#bbb`),
+		primaryShadow: lighten(0.4, `#C67C4E`),
+		secondaryShadow: lighten(0.4, `#EDD6C8`),
 		shadow: lighten(0.4, `#828282`),
-		lightShadow: lighten(0.4, `#F2F2F2`),
+		lightShadow: lighten(0.4, `#F9F2ED`),
 	},
 	spacings: {
 		xxsmall: normalize(4) as 4,
@@ -75,8 +77,8 @@ export const theme = {
 	elevation: {
 		small: 2,
 		medium: 4,
-		large: 8,
-		xlarge: 16,
+		high: 8,
+		ultra: 16,
 	},
 	opacity: {
 		low: 0.5,
@@ -84,3 +86,16 @@ export const theme = {
 		high: 0.9,
 	},
 } as const
+
+export const themePaper: MD3Theme = {
+	...MD3LightTheme,
+	dark: false,
+	colors: {
+		...MD3LightTheme.colors,
+		primary: theme.colors.primary,
+		secondary: theme.colors.secondary,
+		tertiary: theme.colors.tertiary,
+		background: theme.colors.mainBg,
+		shadow: theme.colors.lightShadow,
+	},
+}

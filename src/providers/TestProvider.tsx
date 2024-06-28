@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ThemeProvider } from 'styled-components/native'
 import { PaperProvider } from 'react-native-paper'
 
-import { theme } from '@/styles'
+import { theme, themePaper } from '@/styles'
 
 export const TestProvider = ({ children }: PropsWithChildren) => {
 	return (
@@ -17,7 +17,7 @@ export const TestProvider = ({ children }: PropsWithChildren) => {
 						insets: { top: 0, left: 0, right: 0, bottom: 0 },
 					}}
 				>
-					<PaperProvider>
+					<PaperProvider theme={themePaper}>
 						<StatusBar
 							barStyle="dark-content"
 							backgroundColor="transparent"
