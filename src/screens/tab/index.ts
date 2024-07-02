@@ -1,5 +1,3 @@
 export * from './Bag'
-export * from './Coffee'
 export * from './Favorites'
-export * from './Home'
 export * from './Notifications'

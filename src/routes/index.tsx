@@ -1,5 +1,5 @@
-import { StackRouter } from './StackRouter'
+import { TabRouter } from './TabRouter'
 
 export const RouterApp = () => {
-	return <StackRouter />
+	return <TabRouter />
 }

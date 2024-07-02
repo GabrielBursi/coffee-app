@@ -1,1 +1,2 @@
-export * from './Home'
+export * from './stack'
+export * from './tab'

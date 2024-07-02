@@ -1,5 +1,9 @@
+import { NavigatorScreenParams } from '@react-navigation/native'
+import { RootStackParamList } from './Stack'
+
 export type RootTabParamList = {
-	Home: undefined
-	Example: { userId: string }
-	OtherExample: { sort: 'latest' | 'top' } | undefined
+	HomeStack: NavigatorScreenParams<RootStackParamList>
+	Favorites: undefined
+	Bag: undefined
+	Notifications: undefined
 }

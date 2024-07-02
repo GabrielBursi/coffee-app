@@ -10,6 +10,7 @@ const windowHeight = Dimensions.get('window').height
 export const theme = {
 	border: {
 		radius: {
+			huge: 20,
 			big: 10,
 			small: 4,
 		},

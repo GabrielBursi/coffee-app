@@ -57,7 +57,11 @@ try {
 const getStories = () => {
   return {
     "./src/components/Container/Container.stories.tsx": require("../src/components/Container/Container.stories.tsx"),
-    "./src/screens/Home/Home.stories.tsx": require("../src/screens/Home/Home.stories.tsx"),
+    "./src/screens/stack/Coffee/Coffee.stories.tsx": require("../src/screens/stack/Coffee/Coffee.stories.tsx"),
+    "./src/screens/stack/Home/Home.stories.tsx": require("../src/screens/stack/Home/Home.stories.tsx"),
+    "./src/screens/tab/Bag/Bag.stories.tsx": require("../src/screens/tab/Bag/Bag.stories.tsx"),
+    "./src/screens/tab/Favorites/Favorites.stories.tsx": require("../src/screens/tab/Favorites/Favorites.stories.tsx"),
+    "./src/screens/tab/Notifications/Notifications.stories.tsx": require("../src/screens/tab/Notifications/Notifications.stories.tsx"),
   };
 };
 
