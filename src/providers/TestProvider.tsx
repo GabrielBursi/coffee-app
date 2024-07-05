@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components/native'
 import { PaperProvider } from 'react-native-paper'
 
 import { theme, themePaper } from '@/styles'
+import { Container } from '@/components'
 
 export const TestProvider = ({ children }: PropsWithChildren) => {
 	return (
@@ -23,7 +24,7 @@ export const TestProvider = ({ children }: PropsWithChildren) => {
 							backgroundColor="transparent"
 							translucent
 						/>
-						{children}
+						<Container>{children}</Container>
 					</PaperProvider>
 				</SafeAreaProvider>
 			</ThemeProvider>
