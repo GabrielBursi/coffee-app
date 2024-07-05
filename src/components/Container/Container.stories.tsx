@@ -5,7 +5,7 @@ import { TestProvider } from '@/providers'
 import { Container } from '.'
 
 const meta: Meta<typeof Container> = {
-	title: 'Container',
+	title: 'Components/Container',
 	component: Container,
 	decorators: [
 		(Story) => (
