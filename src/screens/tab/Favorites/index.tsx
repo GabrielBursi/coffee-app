@@ -5,7 +5,10 @@ import { FavoritesScreenProps } from '@/types/screens'
 
 import * as S from './styles'
 
-export const FavoritesScreen = ({ navigation, route }: FavoritesScreenProps) => {
+export const FavoritesScreen = ({
+	navigation,
+	route,
+}: FavoritesScreenProps) => {
 	return (
 		<S.Favorites>
 			<Text accessibilityRole="text">Favorites</Text>
