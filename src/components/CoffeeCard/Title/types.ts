@@ -1,4 +1,4 @@
-import { MD3TypescaleKey } from 'react-native-paper'
+import { Variants } from '@/types/theme'
 
 /* eslint-disable @typescript-eslint/ban-types */
 export type TitleProps = {
@@ -9,7 +9,7 @@ export type TitleProps = {
 }
 
 type TextVariants = Extract<
-	keyof typeof MD3TypescaleKey,
+	Variants,
 	'titleMedium' | 'titleSmall' | 'titleLarge'
 >
 type SubtitleVariant = Extract<TextVariants, 'titleSmall' | 'titleMedium'>
