@@ -3,6 +3,7 @@ import React, { createContext, PropsWithChildren } from 'react'
 import { Title } from './Title'
 import { Price } from './Price'
 import { Rating } from './Rating'
+import { Action } from './Action'
 
 interface CoffeeContext {
 	teste: string
@@ -24,9 +25,11 @@ type CompoundedComponent = CoffeeCardType & {
 	Title: typeof Title
 	Price: typeof Price
 	Rating: typeof Rating
+	Action: typeof Action
 }
 
 export const CoffeeCard = CoffeeCardCompound as CompoundedComponent
 CoffeeCard.Title = Title
 CoffeeCard.Price = Price
 CoffeeCard.Rating = Rating
+CoffeeCard.Action = Action

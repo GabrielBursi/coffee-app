@@ -56,6 +56,7 @@ try {
 
 const getStories = () => {
   return {
+    "./src/components/CoffeeCard/Action/Action.stories.tsx": require("../src/components/CoffeeCard/Action/Action.stories.tsx"),
     "./src/components/CoffeeCard/CoffeeCard.stories.tsx": require("../src/components/CoffeeCard/CoffeeCard.stories.tsx"),
     "./src/components/CoffeeCard/Price/Price.stories.tsx": require("../src/components/CoffeeCard/Price/Price.stories.tsx"),
     "./src/components/CoffeeCard/Rating/Rating.stories.tsx": require("../src/components/CoffeeCard/Rating/Rating.stories.tsx"),
