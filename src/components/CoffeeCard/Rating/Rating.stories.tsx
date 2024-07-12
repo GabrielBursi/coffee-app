@@ -1,10 +1,10 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
+import { View } from 'react-native'
 import type { Meta, StoryObj } from '@storybook/react'
 import { TestProvider } from '@/providers'
 
 import { CoffeeCard } from '@/components'
-import { View } from 'react-native'
 
 const meta: Meta<typeof CoffeeCard.Rating> = {
 	title: 'Components/CoffeeCard/Rating',

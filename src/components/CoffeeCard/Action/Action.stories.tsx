@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { TestProvider } from '@/providers'
 
-import { Action } from '.'
+import { CoffeeCard } from '@/components'
 
-const meta: Meta<typeof Action> = {
+const meta: Meta<typeof CoffeeCard.Action> = {
 	title: 'Components/CoffeeCard/Action',
-	component: Action,
+	component: CoffeeCard.Action,
 	decorators: [
 		(Story) => (
 			<TestProvider>
@@ -24,7 +24,7 @@ const meta: Meta<typeof Action> = {
 }
 export default meta
 
-type Story = StoryObj<typeof Action>
+type Story = StoryObj<typeof CoffeeCard.Action>
 
 export const Basic: Story = {
 	args: {},
