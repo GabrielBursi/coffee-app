@@ -9,6 +9,7 @@ import { Title } from './Title'
 import { Price } from './Price'
 import { Rating } from './Rating'
 import { Action } from './Action'
+import { Cover } from './Cover'
 
 interface CoffeeContext {
 	teste: string
@@ -24,7 +25,7 @@ const CoffeeCardCompound = ({ children }: PropsWithChildren) => {
 	)
 }
 
-const useCoffeeContext = () => {
+const useCoffeeContext = (): CoffeeContext => {
 	const context = useContext(CoffeeContext)
 	useDebugValue('useCoffeeContext', () => context)
 
@@ -41,6 +42,7 @@ type CompoundedComponent = CoffeeCardType & {
 	Price: typeof Price
 	Rating: typeof Rating
 	Action: typeof Action
+	Cover: typeof Cover
 	useCoffee: typeof useCoffeeContext
 }
 
@@ -49,4 +51,5 @@ CoffeeCard.Title = Title
 CoffeeCard.Price = Price
 CoffeeCard.Rating = Rating
 CoffeeCard.Action = Action
+CoffeeCard.Cover = Cover
 CoffeeCard.useCoffee = useCoffeeContext
