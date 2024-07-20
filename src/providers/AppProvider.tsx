@@ -4,25 +4,28 @@ import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { ThemeProvider } from 'styled-components/native'
 import { PaperProvider } from 'react-native-paper'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import { theme, themePaper } from '@/styles'
-import { Container } from '@/components'
 
 export const AppProvider = ({ children }: PropsWithChildren) => {
+	const queryClient = new QueryClient()
+
 	return (
 		<NavigationContainer>
-			<ThemeProvider theme={theme}>
-				<SafeAreaProvider>
+			<QueryClientProvider client={queryClient}>
+				<ThemeProvider theme={theme}>
 					<PaperProvider theme={themePaper}>
-						<StatusBar
-							barStyle="dark-content"
-							backgroundColor="transparent"
-							translucent
-						/>
-						<Container>{children}</Container>
+						<SafeAreaProvider>
+							<StatusBar
+								barStyle="dark-content"
+								backgroundColor="transparent"
+							/>
+							{children}
+						</SafeAreaProvider>
 					</PaperProvider>
-				</SafeAreaProvider>
-			</ThemeProvider>
+				</ThemeProvider>
+			</QueryClientProvider>
 		</NavigationContainer>
 	)
 }
