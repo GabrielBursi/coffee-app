@@ -9,7 +9,14 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { theme, themePaper } from '@/styles'
 
 export const TestProvider = ({ children }: PropsWithChildren) => {
-	const queryClient = new QueryClient()
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				gcTime: 0,
+				staleTime: 0,
+			},
+		},
+	})
 
 	return (
 		<NavigationContainer>
