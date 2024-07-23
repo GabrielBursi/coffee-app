@@ -66,6 +66,7 @@ const getStories = () => {
     "./src/components/Location/DropdownButton/DropdownButton.stories.tsx": require("../src/components/Location/DropdownButton/DropdownButton.stories.tsx"),
     "./src/components/Location/DropdownItem/DropdownItem.stories.tsx": require("../src/components/Location/DropdownItem/DropdownItem.stories.tsx"),
     "./src/components/Location/Location.stories.tsx": require("../src/components/Location/Location.stories.tsx"),
+    "./src/components/SearchCoffee/SearchCoffee.stories.tsx": require("../src/components/SearchCoffee/SearchCoffee.stories.tsx"),
     "./src/screens/stack/Coffee/Coffee.stories.tsx": require("../src/screens/stack/Coffee/Coffee.stories.tsx"),
     "./src/screens/stack/Home/Home.stories.tsx": require("../src/screens/stack/Home/Home.stories.tsx"),
     "./src/screens/tab/Bag/Bag.stories.tsx": require("../src/screens/tab/Bag/Bag.stories.tsx"),
