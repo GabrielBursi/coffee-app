@@ -1,5 +1,6 @@
 export * from './CoffeeCard'
 export * from './Container'
 export * from './Location'
+export * from './MenuNav'
 export * from './NavItem'
 export * from './SearchCoffee'
