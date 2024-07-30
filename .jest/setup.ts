@@ -11,6 +11,20 @@ jest.mock('react-native-reanimated', () => {
 	return Reanimated
 })
 
+jest.mock('react-native/Libraries/Utilities/Platform', () => {
+	const Platform = jest.requireActual(
+		'react-native/Libraries/Utilities/Platform'
+	)
+	Platform.__constants = {
+		...Platform.constants,
+		reactNativeVersion: {
+			...Platform.constants.reactNativeVersion,
+			minor: 1,
+		},
+	}
+	return Platform
+})
+
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper')
 jest.mock('react-native-safe-area-context', () => mockSafeAreaContext)
 

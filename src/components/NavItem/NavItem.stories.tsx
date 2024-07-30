@@ -17,8 +17,13 @@ const meta: Meta<typeof NavItem> = {
 	args: {
 		title: 'Storybook',
 		isSelected: false,
+		onPress: () => console.log('Press'),
 	},
-	argTypes: {},
+	argTypes: {
+		onPress: {
+			type: 'symbol',
+		},
+	},
 	render: (args) => (
 		<Container>
 			<NavItem {...args} />
