@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { useRef, useState } from 'react'
 import { TextInput } from 'react-native'
 import { Searchbar } from 'react-native-paper'
@@ -26,6 +27,7 @@ export const SearchCoffee = () => {
 			style={{
 				backgroundColor: theme.colors.secondaryBg,
 				borderRadius: theme.border.radius.big,
+				flex: 1,
 			}}
 			inputStyle={{ color: theme.colors.secondaryText }}
 			iconColor={theme.colors.secondaryText}

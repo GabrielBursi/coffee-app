@@ -8,7 +8,7 @@ export const Action = styled.Pressable<{ isPressed?: boolean }>`
 		background-color: ${isPressed
 			? darken(0.2, theme.colors.primary)
 			: theme.colors.primary};
-		border-radius: ${theme.border.radius.small}px;
+		border-radius: ${theme.border.radius.big}px;
 		display: flex;
 		justify-content: center;
 		padding: ${theme.spacings.xsmall}px;
