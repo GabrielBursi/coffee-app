@@ -56,19 +56,16 @@ try {
 
 const getStories = () => {
   return {
-    "./src/components/CoffeeCard/Action/Action.stories.tsx": require("../src/components/CoffeeCard/Action/Action.stories.tsx"),
-    "./src/components/CoffeeCard/CoffeeCard.stories.tsx": require("../src/components/CoffeeCard/CoffeeCard.stories.tsx"),
-    "./src/components/CoffeeCard/Cover/Cover.stories.tsx": require("../src/components/CoffeeCard/Cover/Cover.stories.tsx"),
-    "./src/components/CoffeeCard/Price/Price.stories.tsx": require("../src/components/CoffeeCard/Price/Price.stories.tsx"),
-    "./src/components/CoffeeCard/Rating/Rating.stories.tsx": require("../src/components/CoffeeCard/Rating/Rating.stories.tsx"),
-    "./src/components/CoffeeCard/Title/Title.stories.tsx": require("../src/components/CoffeeCard/Title/Title.stories.tsx"),
     "./src/components/Container/Container.stories.tsx": require("../src/components/Container/Container.stories.tsx"),
     "./src/components/Location/DropdownButton/DropdownButton.stories.tsx": require("../src/components/Location/DropdownButton/DropdownButton.stories.tsx"),
     "./src/components/Location/DropdownItem/DropdownItem.stories.tsx": require("../src/components/Location/DropdownItem/DropdownItem.stories.tsx"),
     "./src/components/Location/Location.stories.tsx": require("../src/components/Location/Location.stories.tsx"),
     "./src/components/MenuNav/MenuNav.stories.tsx": require("../src/components/MenuNav/MenuNav.stories.tsx"),
     "./src/components/NavItem/NavItem.stories.tsx": require("../src/components/NavItem/NavItem.stories.tsx"),
+    "./src/components/NormalText/NormalText.stories.tsx": require("../src/components/NormalText/NormalText.stories.tsx"),
     "./src/components/SearchCoffee/SearchCoffee.stories.tsx": require("../src/components/SearchCoffee/SearchCoffee.stories.tsx"),
+    "./src/components/Subtitle/Subtitle.stories.tsx": require("../src/components/Subtitle/Subtitle.stories.tsx"),
+    "./src/components/Title/Title.stories.tsx": require("../src/components/Title/Title.stories.tsx"),
     "./src/screens/stack/Coffee/Coffee.stories.tsx": require("../src/screens/stack/Coffee/Coffee.stories.tsx"),
     "./src/screens/stack/Home/Home.stories.tsx": require("../src/screens/stack/Home/Home.stories.tsx"),
     "./src/screens/tab/Bag/Bag.stories.tsx": require("../src/screens/tab/Bag/Bag.stories.tsx"),

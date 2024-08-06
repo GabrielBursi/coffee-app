@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { TestProvider } from '@/providers'
 
-import { CoffeeCard } from '@/components'
+import { Subtitle } from '.'
 
-const meta: Meta<typeof CoffeeCard> = {
-	title: 'Components/CoffeeCard/Compound',
-	component: CoffeeCard,
+const meta: Meta<typeof Subtitle> = {
+	title: 'Components/Typography/Subtitle',
+	component: Subtitle,
 	decorators: [
 		(Story) => (
 			<TestProvider>
@@ -15,10 +15,12 @@ const meta: Meta<typeof CoffeeCard> = {
 	],
 	args: {},
 	argTypes: {},
+	// eslint-disable-next-line react-native/no-raw-text
+	render: () => <Subtitle>Storybook</Subtitle>,
 }
 export default meta
 
-type Story = StoryObj<typeof CoffeeCard>
+type Story = StoryObj<typeof Subtitle>
 
 export const Basic: Story = {
 	args: {},
