@@ -5,7 +5,7 @@ import * as S from './styles'
 export const NormalText = ({ children }: NormalTextProps) => {
 	return (
 		<S.NormalText
-			variant="bodyMedium"
+			variant="titleMedium"
 			accessible
 			accessibilityLabel={children}
 			aria-label={children}

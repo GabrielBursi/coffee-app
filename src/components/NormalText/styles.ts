@@ -5,6 +5,6 @@ import { styled, css } from 'styled-components/native'
 export const NormalText = styled(Text)`
 	${({ theme }) => css`
 		color: ${theme.colors.secondaryText};
-		font-family: ${theme.font.family.poppinsRegular};
+		font-family: ${theme.font.family.poppinsBold};
 	`}
 `

@@ -5,10 +5,12 @@ import * as S from './styles'
 export const Subtitle = ({ children }: SubtitleProps) => {
 	return (
 		<S.Subtitle
-			variant="titleMedium"
+			variant="titleLarge"
 			accessible
 			accessibilityLabel={children}
 			aria-label={children}
+			numberOfLines={1}
+			ellipsizeMode="tail"
 		>
 			{children}
 		</S.Subtitle>
