@@ -51,7 +51,7 @@ export const theme = {
 		mainBg: '#f9f9f9',
 		secondaryBg: '#222222',
 		primaryText: '#313131',
-		secondaryText: '#E3E3E3',
+		secondaryText: '#9f9f9f',
 		black: '#000',
 		white: '#fff',
 		primaryShadow: lighten(0.4, `#C67C4E`),
