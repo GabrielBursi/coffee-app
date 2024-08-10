@@ -61,6 +61,7 @@ const getStories = () => {
     "./src/components/Location/DropdownItem/DropdownItem.stories.tsx": require("../src/components/Location/DropdownItem/DropdownItem.stories.tsx"),
     "./src/components/Location/Location.stories.tsx": require("../src/components/Location/Location.stories.tsx"),
     "./src/components/MenuNav/MenuNav.stories.tsx": require("../src/components/MenuNav/MenuNav.stories.tsx"),
+    "./src/components/MiniCardCoffee/MiniCardCoffee.stories.tsx": require("../src/components/MiniCardCoffee/MiniCardCoffee.stories.tsx"),
     "./src/components/NavItem/NavItem.stories.tsx": require("../src/components/NavItem/NavItem.stories.tsx"),
     "./src/components/NormalText/NormalText.stories.tsx": require("../src/components/NormalText/NormalText.stories.tsx"),
     "./src/components/SearchCoffee/SearchCoffee.stories.tsx": require("../src/components/SearchCoffee/SearchCoffee.stories.tsx"),
