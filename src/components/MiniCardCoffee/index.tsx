@@ -19,7 +19,12 @@ const MiniCardCoffeeMemoized = ({
 	const theme = useTheme()
 
 	return (
-		<S.MiniCardCoffee style={{ elevation: theme.elevation.medium }}>
+		<S.MiniCardCoffee
+			role="listitem"
+			accessibilityLabel={title}
+			accessible
+			style={{ elevation: theme.elevation.medium }}
+		>
 			<S.Cover
 				accessible
 				role="img"
@@ -29,29 +34,33 @@ const MiniCardCoffeeMemoized = ({
 				resizeMode="cover"
 				source={cover}
 			/>
-			<S.Header>
-				<Subtitle>{title}</Subtitle>
-				<NormalText>{subtitle}</NormalText>
-			</S.Header>
-			<S.Footer>
-				<Subtitle>{formatCurrency(price)}</Subtitle>
-				<S.ButtonStyled
-					mode="contained"
-					dark
-					accessibilityHint="Adiciona café no carrinho"
-					accessibilityLabel="Adicionar carrinho"
-					compact
-					onPress={onAddCart}
-				>
-					<Icon
-						name="plus"
-						role="img"
+			<S.Content>
+				<S.Header>
+					<Subtitle>{title}</Subtitle>
+					<NormalText numberOfLines={2} ellipsizeMode="tail">
+						{subtitle}
+					</NormalText>
+				</S.Header>
+				<S.Footer>
+					<Subtitle>{formatCurrency(price)}</Subtitle>
+					<S.ButtonStyled
+						mode="contained"
+						dark
+						accessibilityHint="Adiciona café no carrinho"
 						accessibilityLabel="Adicionar carrinho"
-						accessible
-						size={20}
-					/>
-				</S.ButtonStyled>
-			</S.Footer>
+						compact
+						onPress={onAddCart}
+					>
+						<Icon
+							name="plus"
+							role="img"
+							accessibilityLabel="Adicionar carrinho"
+							accessible
+							size={20}
+						/>
+					</S.ButtonStyled>
+				</S.Footer>
+			</S.Content>
 		</S.MiniCardCoffee>
 	)
 }

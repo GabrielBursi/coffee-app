@@ -18,6 +18,9 @@ describe('<MiniCardCoffee/>', () => {
 	it('should render correctly', () => {
 		customRender(<MiniCardCoffee {...props} />)
 
+		expect(
+			screen.getByRole('listitem', { name: props.title })
+		).toBeOnTheScreen()
 		expect(screen.getByRole('text', { name: `R$ 15,25` })).toBeOnTheScreen()
 		expect(screen.getByRole('text', { name: props.subtitle })).toBeOnTheScreen()
 		expect(screen.getByRole('text', { name: props.title })).toBeOnTheScreen()

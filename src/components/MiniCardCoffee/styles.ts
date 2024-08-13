@@ -19,6 +19,15 @@ export const Cover = styled.Image`
 	${({ theme }) => css`
 		border-radius: ${theme.border.radius.big}px;
 		flex: 1;
+		max-height: 50%;
+	`}
+`
+
+export const Content = styled.View`
+	${({ theme }) => css`
+		flex: 1;
+		gap: ${theme.spacings.xxsmall}px;
+		justify-content: space-between;
 	`}
 `
 
