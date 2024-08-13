@@ -1,4 +1,5 @@
 export * from './Container'
+export * from './GridListCoffee'
 export * from './Location'
 export * from './MenuNav'
 export * from './MiniCardCoffee'
