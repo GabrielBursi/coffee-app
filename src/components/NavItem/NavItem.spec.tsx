@@ -20,10 +20,15 @@ describe('<NavItem/>', () => {
 	it('should render selected correctly', () => {
 		customRender(<NavItem title="Jest" isSelected />)
 
-		expect(screen.getByRole('menuitem')).toHaveStyle({
+		const chip = screen.getByRole('menuitem')
+		const navButton = screen.getByRole('button', { name: 'Jest' })
+
+		expect(chip).toHaveStyle({
 			backgroundColor: theme.colors.primary,
 		})
-		const navButton = screen.getByRole('button', { name: 'Jest' })
+		expect(chip).toHaveAccessibilityState({
+			selected: true,
+		})
 		expect(navButton).toHaveAccessibilityState({
 			disabled: true,
 			selected: true,

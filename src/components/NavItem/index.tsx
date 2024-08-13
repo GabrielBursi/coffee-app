@@ -25,6 +25,7 @@ export const NavItem = ({
 			accessibilityRole="menuitem"
 			selectedColor={theme.colors.white}
 			accessible
+			accessibilityState={{ selected: isSelected }}
 			textStyle={{
 				color: isSelected ? theme.colors.white : theme.colors.primaryText,
 				fontFamily: theme.font.family.poppinsBold,

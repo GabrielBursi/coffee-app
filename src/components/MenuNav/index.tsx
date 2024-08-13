@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import { FlatList, FlatListProps, ListRenderItem } from 'react-native'
 
 import { MenuNavProps } from './types'
@@ -10,7 +10,15 @@ import { NavItem } from '@/components'
 const MenuNavMemoized = ({ navItens }: MenuNavProps) => {
 	const [itemsList, setItemsList] = useState<NavItemProps[]>([])
 
-	const handlePress = (index: number) => {
+	const refNavMenu = useRef<FlatList<NavItemProps>>(null)
+
+	const handlePress = (_item: NavItemProps, index: number) => {
+		refNavMenu.current?.scrollToIndex({
+			index,
+			animated: true,
+			viewPosition: 0.5,
+		})
+
 		const newItems = itemsList.map((currentItem, currentIndex) => {
 			if (currentIndex === index) {
 				return { ...currentItem, isSelected: true }
@@ -22,7 +30,7 @@ const MenuNavMemoized = ({ navItens }: MenuNavProps) => {
 	}
 
 	const renderItem: ListRenderItem<NavItemProps> = ({ item, index }) => (
-		<NavItem key={index} {...item} onPress={() => handlePress(index)} />
+		<NavItem key={index} {...item} onPress={() => handlePress(item, index)} />
 	)
 
 	const keyExtractor: FlatListProps<NavItemProps>['keyExtractor'] = (
@@ -43,6 +51,14 @@ const MenuNavMemoized = ({ navItens }: MenuNavProps) => {
 			ItemSeparatorComponent={S.Separator}
 			role="navigation"
 			accessible
+			showsHorizontalScrollIndicator={false}
+			ref={refNavMenu}
+			onScrollToIndexFailed={({ index, averageItemLength }) => {
+				refNavMenu.current?.scrollToOffset({
+					offset: index * averageItemLength,
+					animated: true,
+				})
+			}}
 		/>
 	)
 }
