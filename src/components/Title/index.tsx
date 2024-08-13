@@ -1,8 +1,10 @@
 import React from 'react'
-import { TitleProps } from './types'
+
+import { TypographyProps } from '@/types/shared'
+
 import * as S from './styles'
 
-export const Title = ({ children }: TitleProps) => {
+export const Title = ({ children, ...restoProps }: TypographyProps) => {
 	return (
 		<S.Title
 			variant="headlineSmall"
@@ -11,6 +13,7 @@ export const Title = ({ children }: TitleProps) => {
 			aria-label={children}
 			numberOfLines={1}
 			ellipsizeMode="tail"
+			{...restoProps}
 		>
 			{children}
 		</S.Title>

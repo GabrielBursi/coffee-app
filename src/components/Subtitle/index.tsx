@@ -1,8 +1,9 @@
 import React from 'react'
-import { SubtitleProps } from './types'
+
+import { TypographyProps } from '@/types/shared'
 import * as S from './styles'
 
-export const Subtitle = ({ children }: SubtitleProps) => {
+export const Subtitle = ({ children, ...restProps }: TypographyProps) => {
 	return (
 		<S.Subtitle
 			variant="titleLarge"
@@ -11,6 +12,7 @@ export const Subtitle = ({ children }: SubtitleProps) => {
 			aria-label={children}
 			numberOfLines={1}
 			ellipsizeMode="tail"
+			{...restProps}
 		>
 			{children}
 		</S.Subtitle>
